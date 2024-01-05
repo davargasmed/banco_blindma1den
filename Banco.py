@@ -1,3 +1,13 @@
+"""1. Create an online banking system with the following features:
+
+* Users must be able to log in with a username and password.
+* If the user enters the wrong credentials three times, the system must lock them out.
+* The initial balance in the bank account is $2000.
+* The system must allow users to deposit, withdraw, view, and transfer money.
+* The system must display a menu for users to perform transactions.
+
+"""
+
 banco = {'david22': ['miclave', 2000] ,
          'liss97' : ['suclave' , 2000]
          }
@@ -24,26 +34,26 @@ def transferir():#funcion para transferir dinero a otra cuenta
     print('a que cuenta quiere transferir dinero?')
 
 
-for i in range(c):
-    user = input('ingrese su usuario: ')
+for i in range(c): #con este bucle estaremos haciendo la validacion el cual usa la Variable C como variable de control y tiene 3 intentos
+    user = input('ingrese su usuario: ') #solicitamos el nombre del usuario
 
 
-    if user in banco:
-        password = input('ingrese su contraseña: ')
+    if user in banco: #si esta dentro del diccionario le permite ingresar la contraseña
+        password = input('ingrese su contraseña: ') #solicitamos la contraseña
 
 
-        if password in banco[user]:
-            print ('***Ingreso correctamente***')
-            print('Su saldo es: ', banco[user][1])
+        if password in banco[user]: # si la contraseña esta en la lista a la que apunta la clave de usuario en el diccionario le deja pasar
+            print ('***Ingreso correctamente***') #informa del ingreso correcto
+            print('Su saldo es: ', banco[user][1])# muestra el saldo actual a modo de informacion
             print('*****************************************************************')
-            print('¿Qué deseas hacer?:\n'
-            '1.Depositar\n'
+            print('¿Qué deseas hacer?:\n' #este es nuestro menu de opciones luego de iniciar sesion 
+            '1.Depositar\n' # cada una de estas opciones esta representado por funciones las cuales estan definidas desde el principio del codigo
             '2.Retirar\n'
             '3.Ver saldo\n'
             '4.Transferir\n'
             '5.Nada')
 
-            opcion = int(input('Digita el numero de la opcion: '))
+            opcion = int(input('Digita el numero de la opcion: ')) #pedimos al usuario ingresar el numero de la opcion que desea realizar
             if opcion == 1:
                 depositar()
             if opcion == 2:
