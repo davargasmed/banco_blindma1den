@@ -63,7 +63,6 @@ for i in range(c): #con este bucle estaremos haciendo la validacion el cual usa 
                 match opcion:
                     case 1:
                         depositar()
-
                     case 2:
                         retirar()
                     case 3:
@@ -72,7 +71,8 @@ for i in range(c): #con este bucle estaremos haciendo la validacion el cual usa 
                         transferir()
                     case 5:
                         print('hasta luego')
-                        confirmacion = input('estas seguro?\n***********************************\n***escribe si o no***\n')
+                        confirmacion = input('estas seguro?\n***********************************\n'
+                                             '***escribe si o no***\n')
                         if confirmacion == 'si':
                             control = False
             break
