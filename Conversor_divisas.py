@@ -55,6 +55,7 @@ while control:
           '6.GBP (Libra Esterlina)\n'
           )
 
+
     div_i = int(input('escoja por favor el numero de su divisa inicial: '))
     div_f = int(input('escoja por favor el numero de su divisa a convertir: '))
     monto = int(input('Cuanto dinero quiere cambiar?----->'))

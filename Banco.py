@@ -34,6 +34,7 @@ def transferir(): #funcion para transferir dinero a otra cuenta
     print('a que cuenta quiere transferir dinero?')
 
 
+
 for i in range(c): #con este bucle estaremos haciendo la validacion el cual usa la Variable C como variable de control y tiene 3 intentos
     user = input('ingrese su usuario: ') #solicitamos el nombre del usuario
 
