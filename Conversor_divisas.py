@@ -1,9 +1,11 @@
 """Create a currency converter between CLP, ARS, USD, EUR, TRY, GBP with the following features:
 	The user must choose their initial currency and the currency they want to exchange to.
-	The user can choose whether or not to withdraw their funds. If they choose not to withdraw, it should return to the main menu.
+	The user can choose whether or not to withdraw their funds. If they choose not to withdraw, it should return to the
+	 main menu.
 	If the user decides to withdraw the funds, the system will charge a 1% commission.
 	Set a minimum and maximum amount for each currency, it can be of your choice.
-	The system should ask the user if they want to perform another operation. If they choose to do so, it should restart the process; otherwise, the system should close.
+	The system should ask the user if they want to perform another operation. If they choose to do so, it should restart
+	 the process; otherwise, the system should close.
 """
 
 
@@ -67,7 +69,6 @@ while control:
           '6.GBP (Libra Esterlina)\n'
           )
 
-
     div_i = int(input('escoja por favor el numero de su divisa inicial: '))
     div_f = int(input('escoja por favor el numero de su divisa a convertir: '))
     monto = int(input('Cuanto dinero quiere cambiar?----->'))
@@ -81,12 +82,21 @@ while control:
         control = False
         print('Sus fondos son ', resultado)
         print('Por politicas de la empresa cobraremos 1% de comision por la operacion realizada quiere continuar?\n'
-              'Escriba SI o NO ')
-        eleccion= input()
-        if eleccion == 'SI':
-            print ('su nuevo saldo es: ', resultado/0.01)
-            print('gracias por usar nuestros servicios, hasta luego')
+              'Seleccione\n'
+              '1.SI\n'
+              '2.NO\n')
+        eleccion= int(input())
+        if eleccion == 1:
+            print ('su nuevo saldo es: ', resultado*0.99)
+            c= int(input('desea hacer otra operacion?\n'
+                         '1.SI\n'
+                         '2.NO\n'))
+            if c == 1:
+                control = True
+            elif c == 2:
+                print('gracias por usar nuestros servicios, hasta luego')
         else:
+            print('gracias por usar nuestros servicios, vuelva pronto')
             continue
     else:
         continue
