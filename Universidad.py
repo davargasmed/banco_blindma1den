@@ -38,22 +38,29 @@ def login ():
         password = input('ingrese su contraseña: ')
         if usuario in users and password == users[usuario]:
             print('accediste correctamente')
+            return True
             break
-        else:
+        elif i<2:
             print('usuario o contraseña incorrecto ingrese de nuevo.')
+        else:
+            print("ingresaste mal tu usuario o contraseña en 3 oportunidades, el programa se cerrara.")
+            return False
 
 def menu():
     pass
 
-
 def eleccion_usuario():
     nombre = input('ingrese su nombre: ')
     apellido = input('ingrese su apellido: ')
-    programa = input(f'seleccione el numero de su programa de interes: {programas.keys()}')
-    campus = input('1. Manchester\n'
+    programa = int(input('seleccione el numero de su programa de interes:\n'
+                     '1.Medicina\n'
+                     '2.Informatica\n'
+                     '3.Marketing\n'
+                     '4.Artes\n'))
+    campus = int(input('1. Manchester\n'
                        '2. Londres\n'
                        '3. Liverpool\n'
-                       'escoja el campus al que se quiere inscribir(1-3):')
+                       'escoja el campus al que se quiere inscribir(1-3):'))
     matricula(programa,campus)
 
 def cupos (programa,campus):
@@ -71,6 +78,6 @@ def matricula (programa, campus):
     else:
         print('el campus que has seleccionado no tiene cupos disponibles ')
 
-login()
-eleccion_usuario()
-cupos(programa,campus)
+if login():
+    eleccion_usuario()
+    cupos(programa,campus)
