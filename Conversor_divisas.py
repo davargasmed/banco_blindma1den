@@ -1,3 +1,14 @@
+"""Create a currency converter between CLP, ARS, USD, EUR, TRY, GBP with the following features:
+	The user must choose their initial currency and the currency they want to exchange to.
+	The user can choose whether or not to withdraw their funds. If they choose not to withdraw, it should return to the main menu.
+	If the user decides to withdraw the funds, the system will charge a 1% commission.
+	Set a minimum and maximum amount for each currency, it can be of your choice.
+	The system should ask the user if they want to perform another operation. If they choose to do so, it should restart the process; otherwise, the system should close.
+"""
+
+
+
+
 def trade_USD():
     match div_i:
         case 1:
@@ -20,6 +31,7 @@ def trade_USD():
 
 
 def trade_f(div_f,cambioUSD):
+    conversion =0
     match div_f:
         case 1:
             conversion = cambioUSD * 1 / 0.0011
@@ -28,8 +40,8 @@ def trade_f(div_f,cambioUSD):
             conversion = cambioUSD * 1 / 0.0012
             print('usted tiene', conversion, 'en ARS')
         case 3:
-             USD = cambioUSD * 1
-             print('usted tiene', USD, 'en USD')
+             conversion = cambioUSD * 1
+             print('usted tiene', conversion, 'en USD')
         case 4:
             conversion = cambioUSD * 1 / 1.09
             print('usted tiene', conversion, 'en EUR')
@@ -67,6 +79,14 @@ while control:
                         'ESCOJA UN NUMERO:'))
     if retirar == 1:
         control = False
-        print('Sus fondos son ')
+        print('Sus fondos son ', resultado)
+        print('Por politicas de la empresa cobraremos 1% de comision por la operacion realizada quiere continuar?\n'
+              'Escriba SI o NO ')
+        eleccion= input()
+        if eleccion == 'SI':
+            print ('su nuevo saldo es: ', resultado/0.01)
+            print('gracias por usar nuestros servicios, hasta luego')
+        else:
+            continue
     else:
         continue
