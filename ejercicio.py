@@ -9,3 +9,4 @@ if horas > 40:
 else:
     salario = horas * tarifa
     print(f'su salario es {salario}')
+    print('cambiod para nuevo comit')
