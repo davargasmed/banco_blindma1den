@@ -2,12 +2,11 @@ Este es mi solucion del primer reto del discord con blindma1den en el cual se re
 
 1. Create an online banking system with the following features:
 
-* Users must be able to log in with a username and password.
-* If the user enters the wrong credentials three times, the system must lock them out.
-* The initial balance in the bank account is $2000.
-* The system must allow users to deposit, withdraw, view, and transfer money.
-* The system must display a menu for users to perform transactions.
-* 
+*     Users must be able to log in with a username and password.
+*     If the user enters the wrong credentials three times, the system must lock them out.
+*     The initial balance in the bank account is $2000.
+*     The system must allow users to deposit, withdraw, view, and transfer money.
+*     The system must display a menu for users to perform transactions.
 2. Create a currency converter between CLP, ARS, USD, EUR, TRY, GBP with the following features:
 * 		The user must choose their initial currency and the currency they want to exchange to.
 * 		The user can choose whether or not to withdraw their funds. If they choose not to withdraw, it should return to the main menu.
@@ -25,14 +24,16 @@ Este es mi solucion del primer reto del discord con blindma1den en el cual se re
 * 		In London, there is 1 slot per program; in Manchester, there are 3 slots per program, and in Liverpool, there is 1 slot per program.
 * 		If the user selects a program at a campus that has no available slots, the system should display the option to enroll in the program at another campus.
 
-4. Create an online shipping system with the following features:
-* 		The system has a login that locks after the third failed attempt.
-* 		Display a menu that allows: Sending a package, exiting the system.
-* 		To send a package, sender and recipient details are required.
-* 		The system assigns a random package number to each sent package.
-* 		The system calculates the shipping price. $2 per kg.
-* 		The user must input the total weight of their package, and the system should display the amount to pay.  
-* 		The system should ask if the user wants to perform another operation. If the answer is yes, it should return to the main menu. If it's no, it should close the system.
+4. Cree un sistema de envío en línea con las siguientes características:
+
+*     El sistema tiene un inicio de sesión que se bloquea después del tercer intento fallido.
+*     Mostrar un menú que permite: Enviar un paquete, salir del sistema.
+*     Para enviar un paquete, se requieren los datos del remitente y del destinatario.
+*     El sistema asigna un número de paquete aleatorio a cada paquete enviado.
+*     El sistema calcula el precio de envío. $2 por kg.
+*     El usuario debe ingresar el peso total de su paquete y el sistema debe mostrar el monto a pagar.
+*     El sistema debería preguntar si el usuario desea realizar otra operación. Si la respuesta es sí,
+      debería volver al menú principal. Si es no, debería cerrar el sistema."""
 
 
 
