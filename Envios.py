@@ -28,18 +28,27 @@ def login():
             return False
 
 def cliente():
-    flag = True
     remitente = dict()
     destinatario = dict()
-    while flag:
-        print()
-        menu()
+    print('Por favor llene el siguiente formulario:')
+    remitente['nombre'] = input('ingrese el nombre del remitente--->')
+    remitente['telefono'] = int(input('Ingrese el numero de telefono del remitente--->'))
+    remitente['direccion'] = input('Ingrese la direccion del remitente--->')
+    print(f'los datos del remitente son:\n'
+          f'Nombre---> {remitente['nombre']}\n'
+          f'Telefono---> {remitente['telefono']}\n'
+          f'Direccion---> {remitente['direccion']}\n')
+
 def menu():
     print('****Bienvenido a nuestra empresa de envios****\n'
           '****Que desea hacer?****\n'
           '1. Enviar paquete\n'
           '2. Salir\n')
-    opcion = input('Escriba el numero de la opcion que quiere realizar:')
+    opcion = int(input('Escriba el numero de la opcion que quiere realizar:'))
+    if opcion == 1:
+        cliente()
+    else:
+        print('gracias esperamos que vuelva pronto')
 
 login()
-cliente()
+menu()
